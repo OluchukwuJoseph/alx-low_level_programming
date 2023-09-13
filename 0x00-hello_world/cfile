@@ -1,0 +1,3 @@
+#!/bin/bash
+CFILE=hello.c
+cat $CFILE
