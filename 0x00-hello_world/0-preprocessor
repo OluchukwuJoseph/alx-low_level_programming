@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -E hello.c -o c
+gcc -E main.c -o c
