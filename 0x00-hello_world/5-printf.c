@@ -9,9 +9,7 @@
  */
 int main(void)
 {
-/*Sets s as a variable with string data type*/
-char s[] = "with proper grammar, but the outcome is a piece of art,";
 /*Print value of s*/
-printf("%s \n", s);
+printf("with proper grammar, but the outcome is a piece of art,\n");
 return (0);
 }
