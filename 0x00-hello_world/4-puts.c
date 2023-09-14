@@ -9,7 +9,7 @@
 int main(void)
 {
 /*sets s as a variable with string data type*/
-char s[] = "Programming is like building a multilingual puzzle";
+char s[] = "\"Programming is like building a multilingual puzzle";
 /*Prints s*/
 puts(s);
 return (0);
