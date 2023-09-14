@@ -13,9 +13,10 @@ int main(void)
 {
 /*sets n and ln as a variable with int data type*/
 int n;
+int ln;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-int ln = n % 10;
+ln = n % 10;
 /* Checks if ln is a greater than 5 or less than 5.*/
 if (ln > 5 && ln != 0)
 	printf("Last digit of %d is %d and is greater than 5\n", n, ln);
