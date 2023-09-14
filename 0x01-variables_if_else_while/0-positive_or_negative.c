@@ -18,7 +18,7 @@ n = rand() - RAND_MAX / 2;
 /*Checks if n is a positive or negative number*/
 if (n > 0)
 	printf("%d is positive \n", n);
-else if
+else if (n < 0)
 	printf("%d is negative \n", n);
 else
 	printf("%d is zero \n", n);
