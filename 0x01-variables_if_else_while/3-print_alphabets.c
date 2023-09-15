@@ -9,19 +9,20 @@
 */
 int main(void)
 {
-/*stores value in lc and uc*/
-char lc;
-char uc;
+/*stores value in lc, ll, ul and uc*/
+char lc, ll, uc, ul;
 
 lc = 'a';
-uc = 'z';
+ll = 'z';
+uc = 'A';
+ul = 'Z';
 /*prints a-z and A-z*/
-for (; lc <= 'z'; lc++)
+for (; lc <= ll; lc++)
 {
 	putchar(lc);
 }
 
-for (char uc = 'A'; uc <= 'Z'; uc++)
+for (; uc <= ul; uc++)
 {
 	putchar(uc);
 }
