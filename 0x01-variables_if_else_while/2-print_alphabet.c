@@ -16,7 +16,7 @@ char ll;
 fl = 'a';
 ll = 'z';
 /*print a - y*/
-for (fl; fl <= ll; fl++)
+for (; fl <= ll; fl++)
 {
 	putchar(fl);
 }
