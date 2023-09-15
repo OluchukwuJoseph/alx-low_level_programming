@@ -14,7 +14,8 @@ num = 0;
 /*prints 0 - 9*/
 for (; num <= 9; num++)
 {
-	putchar(num);
+/*Converts num to a character and prints it*/
+	putchar('0' + num);
 }
 putchar('\n');
 return (0);
