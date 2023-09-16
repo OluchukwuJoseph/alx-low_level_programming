@@ -18,16 +18,15 @@ ln = 9;
 /*print 0 - 9 in ascending order with comma seperating them*/
 
 for (; n <= ln; n++)
+{
+	putchar('0' + n);
 	if (n < 9)
 	{
-		putchar('0' + n);
-                putchar(',');
-                putchar(' ');
+		putchar(',');
+		putchar(' ');
 	}
-	else
-	{
-		putchar('0' + n);
-	}
+}
 
+putchar('\n');
 return (0);
 }
