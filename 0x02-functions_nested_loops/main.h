@@ -14,8 +14,14 @@ int _putchar(char c);
 /**
  * print_alphabet - prints the alphabets in lowercase.
  *
- * Return: returns 1 on sucess
+ * Return: returns 0 on sucess
  */
 void print_alphabet(void);
+
+/**
+ * print_alphabet_x10 - print the alphabets in lowercase 10 times.
+ * Return: returns 0 on sucess.
+ */
+void print_alphabet_x10(void);
 
 #endif
