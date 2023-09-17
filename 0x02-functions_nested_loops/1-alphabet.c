@@ -14,7 +14,7 @@ int _putchar(char c);
  *
  * Return: return 1 on sucess
  */
-int print_alphabet(void);
+void print_alphabet(void);
 /**
  * main - Entry point
  *
@@ -24,7 +24,7 @@ int print_alphabet(void);
  */
 int main(void)
 {
-	print_alphabet();
+	print_alphabet(void);
 	return (0);
 }
 

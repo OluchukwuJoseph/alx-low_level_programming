@@ -10,6 +10,6 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(char c);
-int print_alphabet(void);
+void print_alphabet(void);
 
 #endif

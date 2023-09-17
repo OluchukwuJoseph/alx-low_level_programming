@@ -5,7 +5,7 @@
  *
  * Return: return 1 on sucess
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	char fc, lc;
 
@@ -16,6 +16,6 @@ int print_alphabet(void)
 		_putchar(fc);
 	}
 	_putchar('\n');
-	
+
 	return (1);
 }
