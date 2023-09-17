@@ -8,6 +8,13 @@
  * On error, -1 is returned, and error is set approprately.
  */
 int _putchar(char c);
+
+/**
+ * print_alphabet - prints a - z
+ *
+ * Return: return 1 on sucess
+ */
+int print_alphabet(void);
 /**
  * main - Entry point
  *
@@ -21,22 +28,3 @@ int main(void)
 	return (0);
 }
 
-/**
- * print_alphabet - prints a - z
- *
- * Return: return 1 on sucess
- */
-int print_alphabet(void)
-{
-	char fc, lc;
-
-	fc = 'a';
-	lc = 'z';
-	for (; fc <= lc; fc++)
-	{
-		_putchar(fc);
-	}
-	_putchar('\n');
-
-	return (1);
-}
