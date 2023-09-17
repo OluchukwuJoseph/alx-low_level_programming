@@ -8,7 +8,6 @@
  * On error, -1 is returned, and error is set approprately.
  */
 int _putchar(char c);
-int print_alphabet(void);
 /**
  * main - Entry point
  *
@@ -18,7 +17,7 @@ int print_alphabet(void);
  */
 int main(void)
 {
-	print_alphabet(void);
+	print_alphabet();
 	return (0);
 }
 
