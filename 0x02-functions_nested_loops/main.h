@@ -10,6 +10,12 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(char c);
+
+/**
+ * print_alphabet - prints the alphabets in lowercase.
+ *
+ * Return: returns 1 on sucess
+ */
 void print_alphabet(void);
 
 #endif

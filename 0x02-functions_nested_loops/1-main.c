@@ -1,21 +1,13 @@
 #include "main.h"
 
+void print_alphabet(void);
 /**
- * print_alphabet - prints a - z
+ * main - check the code
  *
- * Return: return 1 on sucess
+ * Return: Always 0.
  */
-void print_alphabet(void)
+int main(void)
 {
-	char fc, lc;
-
-	fc = 'a';
-	lc = 'z';
-	for (; fc <= lc; fc++)
-	{
-		_putchar(fc);
-	}
-	_putchar('\n');
-
-	return (1);
+	print_alphabet();
+	return (0);
 }
