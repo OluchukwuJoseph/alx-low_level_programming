@@ -1,19 +1,16 @@
 #include "main.h"
 
 /**
- * print_alphabet - prints a - z
+ * print_alphabet - prints the english alphabet
  *
  * Return: return 0
  */
 void print_alphabet(void)
 {
-	char fc, lc;
+	char c;
 
-	fc = 'a';
-	lc = 'z';
-	for (; fc <= lc; fc++)
-	{
-		_putchar(fc);
-	}
+	c = 'a';
+	for (; c <= 'z'; c++)
+		_putchar(c);
 	_putchar('\n');
 }
