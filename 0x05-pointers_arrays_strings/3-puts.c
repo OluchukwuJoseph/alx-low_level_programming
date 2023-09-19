@@ -1,5 +1,7 @@
 #include "main.h"
 
+int _putchar(char c);
+
 /**
  * _puts - prints the content of a string
  * @str: stores content of string.
