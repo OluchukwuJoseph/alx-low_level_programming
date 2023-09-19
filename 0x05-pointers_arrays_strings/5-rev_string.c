@@ -9,7 +9,6 @@ void rev_string(char *s)
 {
 	int i;
 	int lenght = 0;
-	char tmp;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -18,6 +17,9 @@ void rev_string(char *s)
 
 	/*If lenght is an even number*/
 	if (lenght - 1 % 2 == 0)
+
+		char tmp;
+
 	{
 		for (i = 0, lenght = lenght - 1; i <= lenght; i++, lenght--)
 		{
