@@ -1,5 +1,6 @@
 #include "main.h"
 
+int _putchar(char c);
 /**
  * print-array - prints the specified num of content of an array
  * @a: store the elements of array
