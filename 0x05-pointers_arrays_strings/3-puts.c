@@ -3,7 +3,7 @@
 /**
  * _puts - prints the content of a string
  * @str: stores content of string.
- * Return: string
+ * Return: void
  */
 void _puts(char *str)
 {
@@ -11,8 +11,7 @@ void _puts(char *str)
 	char word;
 
 	for (i = 0; str[i] != '\0'; i++)
-		word = _putchar(str[i]);
+		_putchar(str[i]);
 
 	_putchar('\n');
-	return (word);
 }
