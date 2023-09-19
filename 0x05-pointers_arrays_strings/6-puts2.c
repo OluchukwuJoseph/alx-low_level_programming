@@ -17,6 +17,8 @@ void puts2(char *str)
 		/*Prints charcters in sequence*/
 		if (i % 2 == 0)
 			_putchar(str[i]);
+		else
+			continue;
 	}
 	_putchar('\0');
 }
