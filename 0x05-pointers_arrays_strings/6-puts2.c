@@ -8,10 +8,12 @@
  */
 void puts2(char *str)
 {
+
 	int i;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
+		/*Prints charcters in sequence*/
 		if (i % 2 == 0)
 			_putchar(str[i]);
 	}
