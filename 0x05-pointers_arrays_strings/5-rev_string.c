@@ -22,12 +22,12 @@ void rev_string(char *s)
 
 		for (i = 0, lenght = lenght - 1; i <= lenght; i++, lenght--)
 		{
-			/* store str[i] in tmp tempoarily*/
-			tmp = str[i];
-			/* swaps str[i] to str[lenght]*/
-			str[i] = str[lenght];
-			/* swaps str[lenght] to str[i]*/
-			str[lenght] = tmp;
+			/* store s[i] in tmp tempoarily*/
+			tmp = s[i];
+			/* swaps s[i] to s[lenght]*/
+			s[i] = s[lenght];
+			/* swaps s[lenght] to s[i]*/
+			s[lenght] = tmp;
 		}
 	}
 	/* If lenght is an odd number*/
@@ -35,12 +35,12 @@ void rev_string(char *s)
 	{
 		for (i = 0, lenght = lenght - 1; i < lenght; i++, lenght--)
 		{
-			/* store str[i] in tmp tempoarily*/
-			tmp = str[i];
-			/* swaps str[i] to str[lenght]*/
-			str[i] = str[lenght];
-			/* swaps str[lenght] to str[i]*/
-			str[lenght] = tmp;
+			/* store s[i] in tmp tempoarily*/
+			tmp = s[i];
+			/* swaps s[i] to s[lenght]*/
+			s[i] = s[lenght];
+			/* swaps s[lenght] to s[i]*/
+			s[lenght] = tmp;
 		}
 	}
 }
