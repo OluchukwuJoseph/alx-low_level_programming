@@ -1,5 +1,6 @@
 #include "main.h"
 
+int _putchar(char c);
 /**
  * puts2 - Function that returns only even numbers
  * @str: contains contents of string
