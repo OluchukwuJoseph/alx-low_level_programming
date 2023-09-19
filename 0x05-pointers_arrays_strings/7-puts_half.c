@@ -1,5 +1,6 @@
 #include "main.h"
 
+int _putchar(char c);
 /**
  * puts_half - prints the second half of a string
  * @str: stores content of string
