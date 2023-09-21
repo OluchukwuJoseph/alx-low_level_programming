@@ -16,13 +16,11 @@ char *_strcat(char *dest, char *src)
 	for (i = 0; dest[i] != '\0'; i++)
 		lenght++;
 
-	dest[lenght] = ' ';
-	lenght++;
-
 	/* concatenates dest with src*/
 	for (i = 0; src[i] != '\0'; i++)
 		dest[i + lenght] = src[i];
 
 	dest[i + lenght] = '\0';
+
+	return (dest);
 }
-return (dest);
