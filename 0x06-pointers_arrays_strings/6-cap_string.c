@@ -12,9 +12,8 @@ char *cap_string(char *n)
 	for (i = 0; n[i] != '\0'; i++)
 	{
 		if (i == 0)
-		{
 			n[0] = n[0] - 32;
-		}
+
 		if (n[i] == ' ' ||
 		n[i] == '\t' ||
 		n[i] == '\n' ||
