@@ -13,7 +13,7 @@ int len(char *s)
 }
 
 /**
- * palindrome_ - checks if first and last characters of a string are the same
+ * palindrome - checks if first and last characters of a string are the same
  * @s: string
  * @i: First character of a string
  * @lenght: Last character of a string
