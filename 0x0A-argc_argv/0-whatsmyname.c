@@ -3,6 +3,8 @@
 
 /**
  * main - prints the name of file
+ * @argc: Argument counter
+ * @argv: Argument vector
  * Return: 0
  */
 int main(__attribute__((unused))int argc, char *argv[])
