@@ -13,8 +13,10 @@ char *str_concat(char *s1, char *s2)
 	int i, lenght1 = 0, lenght2 = 0;
 
 	/*checks if first string and second string is NULL*/
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	if (s1 != NULL)
 	{
@@ -30,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 			lenght2++;
 	}
 
-	array = malloc((lenght1 + lenght2) * sizeof(char));
+	array = malloc((lenght1 + lenght2 + 1) * sizeof(char));
 	if (array == NULL)
 		return (NULL);
 	/*stores first string in array*/
