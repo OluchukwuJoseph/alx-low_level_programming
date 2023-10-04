@@ -17,10 +17,11 @@ char *_strdup(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 		lenght++;
 	/*Checks if string is empty*/
+	lenght = lenght + 1;
 	if (lenght == 0)
 		return (NULL);
 	/*Allocate memory for string*/
-	array = malloc((lenght + 1) * sizeof(char));
+	array = malloc(lenght * sizeof(char));
 	if (array == NULL)
 		return (NULL);
 
