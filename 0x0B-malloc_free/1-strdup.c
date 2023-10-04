@@ -17,7 +17,7 @@ char *_strdup(char *str)
 	if (lenght == 0)
 		return (NULL);
 	/*Allocate memory for string*/
-	array = malloc(lenght * sizeof(char));
+	array = malloc((lenght + 1) * sizeof(char));
 	if (array == NULL)
 		return (NULL);
 
