@@ -10,6 +10,9 @@ char *_strdup(char *str)
 {
 	char *array;
 	int i, lenght = 0;
+
+	if (str == NULL)
+		return (NULL);
 	/*Counts string*/
 	for (i = 0; str[i] != '\0'; i++)
 		lenght++;
