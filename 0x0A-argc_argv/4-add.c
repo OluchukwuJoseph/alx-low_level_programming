@@ -4,7 +4,7 @@
 /**
  * main - adds numbers
  * @ac: Argument counter
- * @Argument Array
+ * @av: Argument Array
  * Return: sum of numbers
 */
 int main(int ac, char *av[])
@@ -18,7 +18,7 @@ int main(int ac, char *av[])
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			if (av[i][j] >= '0' && av[i][j] <= '9')
+			if (av[i][j] <= '9')
 			{
 				n = (av[i][j] - '0');
 				number = number * 10 + n;
