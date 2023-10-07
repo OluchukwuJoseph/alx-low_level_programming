@@ -12,7 +12,10 @@ int main(int ac, char *av[])
 	int i, n, result = 0;
 	/*Checks if any argument was passed*/
 	if (ac == 1)
-		return (0);
+	{
+		printf("0\n");
+		return (1);
+	}
 	/*Checks for numbers in the array and converts them to integer*/
 	for (i = 1; i < ac; i++)
 	{
