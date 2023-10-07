@@ -14,7 +14,7 @@ int main(int ac, char *av[])
 	if (ac == 1)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 	/*Checks for numbers in the array and converts them to integer*/
 	for (i = 1; i < ac; i++)
