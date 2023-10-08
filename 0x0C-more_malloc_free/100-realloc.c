@@ -11,6 +11,7 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *array;
+	char *array_char, *ptr_char;
 	unsigned int element = 0, i;
 
 	if (old_size == new_size)
@@ -29,8 +30,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL);
 	}
-	char *ptr_char = (char *)ptr;
-	char *array_char = (char *)array;
+
+	array_char = (char *)array;
+	ptr_char = (char *)ptr;
 
 	element = new_size / sizeof(char);
 	for (i = 0; i < element; i++)
