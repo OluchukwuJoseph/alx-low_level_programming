@@ -34,7 +34,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	array_char = (char *)array;
 	ptr_char = (char *)ptr;
 
-	element = new_size / sizeof(char);
+	element = old_size / sizeof(char);
 	for (i = 0; i < element; i++)
 		array_char[i] = ptr_char[i];
 
