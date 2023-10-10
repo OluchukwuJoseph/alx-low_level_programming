@@ -14,4 +14,5 @@ int main(void)
 	for (i = 0; array[i] != '\0'; i++)
 		_putchar(array[i]);
 	_putchar('\n');
+	return (0);
 }
