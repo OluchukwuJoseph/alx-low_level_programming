@@ -1,1 +1,1 @@
-This directory is all about Macros and How to use Macros.
+This directory contains the important projects and concepts to become a very efficient Low Level Language Programmer.
