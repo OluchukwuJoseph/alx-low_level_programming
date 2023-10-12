@@ -15,9 +15,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 
 	va_start(args, n);
-	if (n <= 0)
+	if (n == 0)
 	{
-		printf("NULL");
 		return;
 	}
 	num_array = malloc(n * sizeof(int));
