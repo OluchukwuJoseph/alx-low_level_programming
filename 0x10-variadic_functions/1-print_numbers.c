@@ -36,5 +36,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%d", num_array[i]);
 	}
 	printf("\n");
-	free(num_array);
+	va_end(num_array);
 }
