@@ -22,7 +22,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	num_array = malloc(n * sizeof(int));
 	if (num_array == NULL)
 	{
-		printf("Insufficient space");
+		printf("Insufficient space\n");
+		free(num_array);
 		return;
 	}
 
