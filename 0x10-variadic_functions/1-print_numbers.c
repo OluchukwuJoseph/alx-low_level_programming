@@ -16,9 +16,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(args, n);
 	if (n == 0)
-	{
 		return;
-	}
+	if (separator == NULL)
+		separator = "";
 	num_array = malloc(n * sizeof(int));
 	if (num_array == NULL)
 	{
@@ -31,8 +31,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	printf("%d", num_array[0]);
 	for (i = 1; i < n; i++)
 	{
-		if (separator != NULL)
-			printf("%s", separator);
+		printf("%s", separator);
 		printf("%d", num_array[i]);
 	}
 	printf("\n");
