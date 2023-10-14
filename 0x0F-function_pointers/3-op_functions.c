@@ -37,7 +37,7 @@ int op_mul(int a, int b)
  * op_div - divides intergers
  * @a: first interger
  * @b: second integer
- * Return: division of integers
+ * Return: division of numbers
 */
 int op_div(int a, int b)
 {

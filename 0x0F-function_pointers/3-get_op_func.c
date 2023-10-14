@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 /**
- * get_op_func - takes in an operator and calls the appropriate function
+ * get_op_func - take in an operator and calls the appropriate function
  * @s: operator
  * Return: Appropraite function
  */
