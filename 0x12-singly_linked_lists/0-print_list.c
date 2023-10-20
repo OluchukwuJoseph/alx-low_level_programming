@@ -1,5 +1,10 @@
 #include "lists.h"
 
+/**
+ * print_list - Prints the entire linked list
+ * @h: head
+ * Return: The number of lists printed
+ */
 size_t print_list(const list_t *h)
 {
 	const list_t *current = h;
