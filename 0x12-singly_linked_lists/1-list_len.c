@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * liat_len - calculates the length of a linked list
+ * list_len - calculates the length of a linked list
  * @h: head (Beginning of the list)
  * Return: length
 */
@@ -14,7 +14,7 @@ size_t list_len(const list_t *h)
 	while (print != NULL)
 	{
 		i++;
-		print = print -> next;
+		print = print->next;
 	}
 	return (i);
 }
