@@ -1,6 +1,20 @@
 #include "lists.h"
 
 /**
+ * _strlen - counts string
+ * @string: string
+ * Return: Length of string
+ */
+size_t _strlen(const char *string)
+{
+	size_t length = 0;
+
+	while (string[length] != '\0')
+		length++;
+	return (length);
+}
+
+/**
  * add_node - adds new list to the top
  * @head: Address of previous list top
  * @str: List element
@@ -8,7 +22,7 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *add, *new;
+	list_t *new;
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)

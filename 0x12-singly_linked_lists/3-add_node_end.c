@@ -1,6 +1,20 @@
 #include "lists.h"
 
 /**
+ * _strlen - counts string
+ * @string: string
+ * Return: Length of string
+ */
+size_t _strlen(const char *string)
+{
+	size_t length = 0;
+
+	while (string[length] != '\0')
+		length++;
+	return (length);
+}
+
+/**
  * add_node_end - adds new list to last list
  * @head: First list
  * @str: content of list
