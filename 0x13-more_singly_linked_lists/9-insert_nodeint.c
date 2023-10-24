@@ -8,6 +8,8 @@
 */
 listint_t *add_front(listint_t **head, int n)
 {
+	if (head == NULL || *head == NULL)
+		return (NULL);
 	listint_t *new_node;
 
 	new_node = (listint_t *)malloc(sizeof(listint_t));
