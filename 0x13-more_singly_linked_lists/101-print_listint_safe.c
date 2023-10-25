@@ -28,16 +28,18 @@ void free_listint2(listint_t **head)
 size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *temp = head;
-	size_t i = 0;
+	size_t i = 0, j;
 	const listint_t *visited[1024];
 
+	if (head == NULL)
+		exit(98);
 	while (temp != NULL)
 	{
-		for (size_t j = 0; j < i; j++)
+		for (j = 0; j < i; j++)
 		{
 			if (temp == visited[j])
 			{
-				printf("-> [%p] %d\n", (void *)temp, temp->n);
+				printf("-> [%p] %d\n",(void *) temp, temp->n);
 				return (i);
 			}
 		}
