@@ -1,24 +1,4 @@
 #include "main.h"
-
-/**
- * _strlen - counts the characters in a string
- * @string: string to be counted
- * Return: Lenght to string
-*/
-unsigned int _strlen(const char *string)
-{
-	unsigned int length = 0;
-
-	while (string[length] != '\0')
-	{
-		if (string[length] == '0' || string[length] == '1')
-			length++;
-		else
-			return (0);
-	}
-	return (length);
-}
-
 /**
  * binary_to_uint - converts binary to unsigned int
  * @b: binary
@@ -26,14 +6,21 @@ unsigned int _strlen(const char *string)
 */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int length = _strlen(b), decimal = 0;
-	unsigned int i = 0;
+	unsigned int decimal, n;
 
-	if (!b || b == NULL)
+	decimal = 0;
+	if (!b)
 		return (0);
-
-	for (; i < length; i++)
-		decimal = (decimal << 1) | (b[i] - '0');
-
+	for (n = 0; b[n] != '\0'; n++)
+	{
+		if (b[n] != '0' && b[n] != '1')
+			return (0);
+	}
+	for (n = 0; b[n] != '\0'; n++)
+	{
+		decimal = decimal << 1;
+		if (b[n] == '1')
+			decimal += 1;
+	}
 	return (decimal);
 }
