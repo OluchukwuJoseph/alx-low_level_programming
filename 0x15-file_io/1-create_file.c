@@ -1,20 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - counts the characters in a string
- * @string: string to be counted
- * Return: length of string
- */
-size_t _strlen(const char *string)
-{
-	size_t length = 0;
-
-	while (string[length] != '\0')
-		length++;
-	return (length);
-}
-
-/**
  * create_file - Creates file if file does not exist and adds content to file
  * @filename: name of file to be created
  * @text_content: Content to be added
