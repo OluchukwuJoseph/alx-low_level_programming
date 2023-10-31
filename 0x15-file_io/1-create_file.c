@@ -22,20 +22,26 @@ size_t _strlen(const char *string)
 */
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
-	size_t lenght = _strlen(text_content);
+	int fd, rwr;
+	size_t length;
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_WRONLY, 0600);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
-	if (lenght == 0)
-		return (1);
-	text_content[lenght] = '\0';
-	lenght++;
-	write(fd, text_content, lenght);
-	close(fd);
+	if (text_content == NULL)
+		text_content = "";
+
+	for (length = 0; text_content[length]; length++)
+	;
+
+	rwr = write(fd, text_content, length);
+	if (rwr == -1)
+	{
+		close(fd);
+		return (-1);
+	}
 	return (1);
 }
