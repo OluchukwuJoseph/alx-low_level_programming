@@ -18,16 +18,16 @@ void print_binary(unsigned long int n)
 		return;
 	}
 	/*converts number to binary*/
-	while (mask > 0)
+	while (mask != 0)
 	{
 		if (n & mask)
 		{
-			putchar('1');
+			_putchar('1');
 			started = 1;
 		}
 		else if (started)
 		{
-			putchar('0');
+			_putchar('0');
 		}
 		mask = mask >> 1;
 	}
