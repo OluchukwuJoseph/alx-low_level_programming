@@ -1,4 +1,4 @@
-#include "imain.h"
+#include "main.h"
 
 /**
  * get_endianness - checkswhat order bytes are stored in computer memory
