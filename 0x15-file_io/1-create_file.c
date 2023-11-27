@@ -35,10 +35,7 @@ int create_file(const char *filename, char *textcontent)
 
 	buffer_length = _strlen(textcontent);
 	if (buffer_length == 0)
-	{
-		close(fd);
-		return (1);
-	}
+		textcontent = "";
 
 	bytes_written = write(fd, textcontent, buffer_length);
 	if (bytes_written == -1)
