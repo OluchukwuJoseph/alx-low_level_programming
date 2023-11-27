@@ -32,11 +32,10 @@ int create_file(const char *filename, char *textcontent)
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
-
-	buffer_length = _strlen(textcontent);
-	if (buffer_length == 0)
+	if (textcontent == NULL)
 		textcontent = "";
-
+	for (; textcontent[buffer_length]; buffer_length++)
+		;
 	bytes_written = write(fd, textcontent, buffer_length);
 	if (bytes_written == -1)
 	{
