@@ -1,13 +1,18 @@
 #include "main.h"
 
+/**
+ * _strlen - counts characters in a string
+ * @str: string
+ * Return: Length of string
+ */
 size_t _strlen(const char *str)
 {
-  size_t length = 0;
+	size_t length = 0;
 
-  while (str[length] != '\0')
-    length++;
+	while (str[length] != '\0')
+		length++;
 
-  return (length);
+	return (length);
 }
 
 /**
@@ -24,7 +29,7 @@ int create_file(const char *filename, char *textcontent)
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_CREAT | O_EXCL | O_WRONLY | O_TRUNC, 600);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
 
