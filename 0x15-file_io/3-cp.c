@@ -33,7 +33,7 @@ int main(int ac, char **av)
 		exit(99);
 	}
 	/*copies contents from first file to second file*/
-	while ((bytes_read = read(fd_src, buffer, BUFFERSIZE)) > 0)
+	while ((bytes_read = read(fd_src, buffer, sizeof(buffer))) > 0)
 	{
 		bytes_written = write(fd_des, buffer, bytes_read);
 		if (bytes_written == -1)
