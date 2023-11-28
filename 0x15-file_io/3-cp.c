@@ -39,12 +39,14 @@ int main(int ac, char **av)
 		if (bytes_written == -1)
 		{
 			dprintf(STDERR_FILENO, "Can't write to %s\n", av[2]);
+			close(fd_des);
 			exit(99);
 		}
 	}
 	if (bytes_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		close(fd_src);
 		exit(98);
 	}
 	/*close first file*/
