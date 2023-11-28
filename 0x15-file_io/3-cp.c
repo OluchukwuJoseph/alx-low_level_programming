@@ -26,14 +26,14 @@ int main(int ac, char **av)
 		exit(98);
 	}
 	/*opens second file passed*/
-	fd_des = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	fd_des = open(av[2], O_CREAT | O_TRUNC | O_WRONLY | O_APPEND, 0664);
 	if (fd_des == -1)
 	{
 		dprintf(STDERR_FILENO, "Can't write to %s\n", av[2]);
 		exit(99);
 	}
 	/*copies contents from first file to second file*/
-	while ((bytes_read = read(fd_src, buffer, sizeof(buffer))) > 0)
+	while ((bytes_read = read(fd_src, buffer, BUFFERSIZE)) > 0)
 	{
 		bytes_written = write(fd_des, buffer, bytes_read);
 		if (bytes_written == -1)
