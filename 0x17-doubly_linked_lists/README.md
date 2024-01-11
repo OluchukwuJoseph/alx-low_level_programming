@@ -1,0 +1,2 @@
+# 0x17-doubly_linked_lists
+Welcome to the "0x17-doubly_linked_lists" directory! This directory documents my exploration and implementation of doubly linked lists in the C programming language during my coursework at ALX School. Doubly linked lists are a type of linked list where each node contains a data element and two pointers - one pointing to the next node and another pointing to the previous node.
