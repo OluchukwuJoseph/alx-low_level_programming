@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * get_dnodeint_at_index - Retrieves a node at a specific index in a doubly linked list.
+ * get_dnodeint_at_index - Retrieve a node at a specific index in a linked list
  * @head: Pointer to the head of the doubly linked list.
  * @index: Index of the desired node (starting from 0).
  * Return: Pointer to the node at the specified index.
