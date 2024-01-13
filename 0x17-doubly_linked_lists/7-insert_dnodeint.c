@@ -7,57 +7,49 @@
  * @n: Value to be stored in the new node.
  * Return: Pointer to the newly inserted node on success, NULL on failure.
  */
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *temp, *newNode, *prev;
+	dlistint_t *temp, *new, *prev;
 	unsigned int i = 0;
 
-	newNode = malloc(sizeof(dlistint_t));
-	if (newNode == NULL)
-		return NULL;
-
-	newNode->n = n;
-
-	if (*h == NULL && idx == 0)
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+	new->prev = NULL;
+	new->n = n;
+	new->next = NULL;
+	if (*h == NULL)
 	{
-		newNode->prev = NULL;
-		newNode->next = NULL;
-		*h = newNode;
-		return newNode;
+		*h = new;
+		return (*h);
 	}
-
-	if (*h == NULL || idx == 0){
-		free(newNode);
-		return NULL;
-	}
-
 	temp = *h;
-
-	while (temp != NULL && i < idx)
+	while (temp->next != NULL)
 	{
-		prev = temp;
+		if (i == idx)
+			break;
 		temp = temp->next;
 		i++;
 	}
-
-	if (temp == NULL && i == idx)
+	if ((i + 1) == idx)
 	{
-		prev->next = newNode;
-		newNode->prev = prev;
-		newNode->next = NULL;
-		return newNode;
+		temp->next = new;
+		new->prev = temp;
+		return (new);
 	}
-	else if (temp != NULL && i == idx)
+	if (idx != i)
 	{
-		prev->next = newNode;
-		newNode->prev = prev;
-		newNode->next = temp;
-		temp->prev = newNode;
-		return newNode;
+		free(new);
+		return (NULL);
 	}
-	else
-	{
-		free(newNode);
-		return NULL;
-	}
+	new->next = temp;
+	prev = temp->prev;
+	new->prev = prev;
+	temp->prev = new;
+	if (prev != NULL)
+		prev->next = new;
+	if (i == 0)
+		*h = new;
+	return (new);
 }
