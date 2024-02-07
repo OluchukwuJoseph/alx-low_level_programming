@@ -1,10 +1,19 @@
 #include "hash_tables.h"
 
-void handle_collision(hash_table_t *ht, hash_node_t *item, unsigned long int index)
+/**
+ * handle_collision - Responsible for handling collisions that may occur
+ * when setting a key-value pair
+ * @ht: A pointer to the hash table where collision occurs.
+ * @item: Pointer to the hash node that needs to be added to the linked list
+ * @i: Integer representing the index in the hash table where the
+ * collision occurred.
+ * Return: Nothing
+ */
+void handle_collision(hash_table_t *ht, hash_node_t *item, unsigned long int i)
 {
 	hash_node_t *head, *temp;
 
-	head = ht->array[index];
+	head = ht->array[i];
 	temp = head;
 
 	while (temp->next != NULL)
@@ -12,6 +21,16 @@ void handle_collision(hash_table_t *ht, hash_node_t *item, unsigned long int ind
 	temp->next = item;
 }
 
+/**
+ * hash_table_set - Responsible for setting a key-value pair in a hash table
+ * @ht: A pointer to the hash table where the key-value pair will be set.
+ * @key: A string representing the key of the key-value pair.
+ * @value: A string representing the value of the key-value pair.
+ * Return: An integer value as follows:
+ * 0: If the key-value pair is successfully set.
+ * 1: If there is an error during memory allocation or
+ * if the value cannot be set.
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
