@@ -15,7 +15,6 @@ void handle_collision(hash_table_t *ht, hash_node_t *item, unsigned long int i)
 
 	temp = ht->array[i];
 	item->next = temp;
-	temp->next = NULL;
 	ht->array[i] = item;
 }
 
