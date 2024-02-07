@@ -20,29 +20,19 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (ht->array[i] == NULL)
 				continue;
-			if (printed_pairs == 0)
+			temp = ht->array[i];
+			while (temp != NULL)
 			{
-				printf("'%s': '%s'", ht->array[i]->key,
-						ht->array[i]->value);
-				printed_pairs++;
-			}
-			else if (printed_pairs > 0)
-			{
-				printf(", '%s': '%s'", ht->array[i]->key,
-						ht->array[i]->value);
-				printed_pairs++;
-			}
-			if (ht->array[i]->next != NULL)
-			{
-				temp = ht->array[i]->next;
-				while (temp != NULL)
-				{
+				if (printed_pairs == 0)
+					printf("'%s': '%s'", temp->key,
+							temp->value);
+				else
 					printf(", '%s': '%s'", temp->key,
 							temp->value);
-					printed_pairs++;
-					temp = temp->next;
-				}
+				printed_pairs++;
+				temp = temp->next;
 			}
+
 		}
 		printf("}\n");
 	}
