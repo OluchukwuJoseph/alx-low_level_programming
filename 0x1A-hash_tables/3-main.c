@@ -14,22 +14,13 @@ int main(void)
 
 	ht = hash_table_create(1024);
 	hash_table_set(ht, "hetairas", "1st node");
-	printf("KEY -> %s\n", ht->array[key_index((unsigned char *) "hetairas", ht->size)]->key);
-	printf("VALUE -> %s\n", ht->array[key_index((unsigned char *) "hetairas", ht->size)]->value);
+	/*printf("KEY -> %s\n", ht->array[key_index((unsigned char *) "hetairas", ht->size)]->key);
+	printf("VALUE -> %s\n", ht->array[key_index((unsigned char *) "hetairas", ht->size)]->value);*/
 
 	hash_table_set(ht, "mentioner", "2nd node");
-	printf("KEY -> %s\n", ht->array[key_index((unsigned char *) "mentioner", ht->size)]->key);
-	printf("VALUE -> %s\n", ht->array[key_index((unsigned char *) "mentioner", ht->size)]->value);
+	/*printf("KEY -> %s\n", ht->array[key_index((unsigned char *) "mentioner", ht->size)]->key);
+	printf("VALUE -> %s\n", ht->array[key_index((unsigned char *) "mentioner", ht->size)]->value);*/
 
-	hash_table_set(ht, "mentioner", "2nd try");
-	printf("KEY -> %s\n", ht->array[key_index((unsigned char *) "mentioner", ht->size)]->key);
-	printf("VALUE -> %s\n", ht->array[key_index((unsigned char *) "mentioner", ht->size)]->value);
-
-	hash_table_set(ht, "hetairas", "1st node");
-	printf("KEY -> %s\n", ht->array[key_index((unsigned char *) "hetairas", ht->size)]->key);
-	printf("VALUE -> %s\n", ht->array[key_index((unsigned char *) "hetairas", ht->size)]->value);
-
-	printf("KEY -> %s\n", ht->array[key_index((unsigned char *) "hetairas", ht->size)]->next->key);
-	printf("VALUE -> %s\n", ht->array[key_index((unsigned char *) "hetairas", ht->size)]->next->value);
+	hash_table_print(ht);
 	return (EXIT_SUCCESS);
 }
