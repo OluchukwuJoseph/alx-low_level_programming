@@ -12,7 +12,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 all: ${NAME}
 
 # The school rule, this is an executable.
-${NAME}: ${OBJ} m.h
+${NAME}: m.h ${OBJ}
 	${CC} ${OBJ} -o $@
 
 # This rule deletes all Emacs and Vim temporary files along with the executable.
