@@ -17,16 +17,16 @@ ${NAME}: ${OBJ}
 
 # This rule deletes all Emacs and Vim temporary files along with the executable.
 clean:
-	${RM} *~ school
+	${RM} *~ ${NAME}
 
 # This rule deletes the object files.
 oclean:
-	${RM} school.o main.o
+	${RM} ${OBJ}
 
 # This rule  deletes all Emacs and Vim temporary files, the executable
 # and the object files.
 fclean:
-	${RM} *~ school school.o main.o
+	${RM} *~ ${NAME} ${OBJ}
 
 # This rule forces recompilation of all source files.
 re:
