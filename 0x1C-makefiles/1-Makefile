@@ -1,0 +1,13 @@
+#variables
+CC = gcc
+SRC = $(wildcard *.c)
+
+#all phony targets
+.PHONY: all
+
+#The all rule
+all: school
+
+#The school rule, this is an executable
+school: ${SRC}
+	${CC} ${SRC} -o $@
