@@ -1,0 +1,35 @@
+# Variables
+CC = gcc
+SRC = school.c main.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+# PHONY targets
+.PHONY: all
+
+# The all rule
+all: school
+
+# The school rule, this is an executable.
+${NAME}: ${OBJ}
+	${CC} ${OBJ} -o $@
+
+# This rule deletes all Emacs and Vim temporary files along with the executable.
+clean:
+	${RM} *~ school
+
+# This rule deletes the object files.
+oclean:
+	${RM} school.o main.o
+
+# This rule  deletes all Emacs and Vim temporary files, the executable
+# and the object files.
+fclean:
+	${RM} *~ school school.o main.o
+
+# This rule forces recompilation of all source files.
+re:
+	${CC} -c -o ${word 1,${OBJ}} ${word 1,${SRC}}
+	${CC} -c -o ${word 2,${OBJ}} ${word 2,${SRC}}
+	${CC} ${OBJ} -o ${NAME}
