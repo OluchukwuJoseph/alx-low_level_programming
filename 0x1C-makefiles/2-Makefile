@@ -1,0 +1,15 @@
+#variables
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(SRC:%.c=%.o)
+NAME = school
+
+#PHONY targets
+.PHONY: all
+
+#The all rule
+all: school
+
+#The school rule, this is an executable
+${NAME}: ${OBJ}
+	${CC} ${OBJ} -o $@
