@@ -7,7 +7,7 @@ RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # PHONY targets
-.PHONY: all
+.PHONY: all clean oclean fclean re
 
 # The all rule
 all: ${NAME}
@@ -26,11 +26,7 @@ oclean:
 
 # This rule  deletes all Emacs and Vim temporary files, the executable
 # and the object files.
-fclean:
-	${RM} *~ ${NAME} ${OBJ}
+fclean: clean oclean
 
 # This rule forces recompilation of all source files.
-re:
-	${CC} ${CFLAGS} -c -o ${word 1,${OBJ}} ${word 1,${SRC}}
-	${CC} ${CFLAGS} -c -o ${word 2,${OBJ}} ${word 2,${SRC}}
-	${CC} ${CFLAGS} ${OBJ} -o ${NAME}
+re: fclean all

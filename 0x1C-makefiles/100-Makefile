@@ -5,33 +5,27 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-# Define a variable for $(CC), $(RM) and $(CFLAGS)
-COMPILER = $(CC)
-REMOVE = $(RM)
-COMPILER_FLAGS = $(CFLAGS)
-
 # PHONY targets
-.PHONY: all
+.PHONY: all clean oclean fclean re
 
 # The all rule
 all: ${NAME}
 
 # The school rule, this is an executable.
 ${NAME}: ${OBJ} m.h
-	${COMPILER} ${COMPILER_FLAGS} ${OBJ} -o $@
+	${CC} ${OBJ} -o $@
 
 # This rule deletes all Emacs and Vim temporary files along with the executable.
 clean:
-	$(REMOVE) *~ ${NAME}
+	$(RM) *~ ${NAME}
 
 # This rule deletes the object files.
 oclean:
-	$(REMOVE) ${OBJ}
+	$(RM) ${OBJ}
 
 # This rule  deletes all Emacs and Vim temporary files, the executable
 # and the object files.
-fclean:
-	$(REMOVE) *~ ${NAME} ${OBJ}
+fclean: clean oclean
 
 # This rule forces recompilation of all source files.
 re: fclean all
