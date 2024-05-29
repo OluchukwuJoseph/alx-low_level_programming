@@ -4,6 +4,7 @@ SRC = main.c school.c
 OBJ = $(SRC:%.c=%.o)
 NAME = school
 RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # Phony targets
 .PHONY: all clean oclean fclean re
@@ -30,6 +31,6 @@ fclean:
 
 # This rule forces recompilation of all source files.
 re:
-	${CC} -c -o ${word 1,${OBJ}} ${word 1,${SRC}}
-	${CC} -c -o ${word 2,${OBJ}} ${word 2,${SRC}}
+	${CC} ${CFLAGS}    -c -o ${word 1,${OBJ}} ${word 1,${SRC}}
+	${CC} ${CFLAGS}    -c -o ${word 2,${OBJ}} ${word 2,${SRC}}
 	${CC} ${OBJ} -o ${NAME}
