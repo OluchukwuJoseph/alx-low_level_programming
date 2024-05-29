@@ -1,10 +1,13 @@
 # variable defination
+
 CC := gcc
 SRC := $(wildcard *.c)
+OBJ := $(SRC:%.c=%.o)
+NAME = school
 
 .PHONY: all
 
 all: school
 
-school: ${SRC}
-	${CC} ${SRC} -o school
+${NAME}: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
