@@ -1,0 +1,29 @@
+# variable defination
+
+CC := gcc
+SRC := $(wildcard *.c)
+OBJ := $(SRC:%.c=%.o)
+NAME := school
+RM := rm
+
+.PHONY: all clean oclean fclean re
+
+all: ${NAME}
+
+${NAME}: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
+
+clean:
+	${RM} -f *~ ${NAME}
+
+oclean:
+	${RM} -f ${OBJ}
+
+fclean:
+	${RM} -f *~ ${NAME}
+	${RM} -f ${OBJ}
+
+re:
+	${CC} -c -o ${word 1,${OBJ}} ${word 1,${SRC}}
+	${CC} -c -o ${word 2,${OBJ}} ${word 2,${SRC}}
+	${CC} ${OBJ} -o ${NAME}
