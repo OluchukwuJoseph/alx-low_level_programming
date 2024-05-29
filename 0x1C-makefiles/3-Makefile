@@ -1,9 +1,9 @@
 # Variables
 CC = gcc
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 OBJ = $(SRC:%.c=%.o)
 NAME = school
-RM = rm
+RM = rm -f
 
 # Phony targets
 .PHONY: all clean oclean fclean re

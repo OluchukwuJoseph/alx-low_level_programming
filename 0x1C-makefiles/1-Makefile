@@ -1,6 +1,6 @@
 # Variable
 CC = gcc
-SRC = $(wildcard *.c)
+SRC = school.c main.c
 
 # Phony targets
 .PHONY: all
