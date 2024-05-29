@@ -1,13 +1,16 @@
-# variable defination
+# Variable
 
-CC := gcc
-SRC := $(wildcard *.c)
-OBJ := $(SRC:%.c=%.o)
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(SRC:%.c=%.o)
 NAME = school
 
+# Phony targets
 .PHONY: all
 
+# The all rule
 all: school
 
+# The school rule, this is an executable
 ${NAME}: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}

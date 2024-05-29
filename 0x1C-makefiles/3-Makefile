@@ -1,28 +1,34 @@
-# variable defination
+# Variables
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(SRC:%.c=%.o)
+NAME = school
+RM = rm
 
-CC := gcc
-SRC := $(wildcard *.c)
-OBJ := $(SRC:%.c=%.o)
-NAME := school
-RM := rm
-
+# Phony targets
 .PHONY: all clean oclean fclean re
 
+# The all rule
 all: ${NAME}
 
 ${NAME}: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
+# This rule deletes all Emacs and Vim temporary files along with the executable
 clean:
 	${RM} -f *~ ${NAME}
 
+# This rule deletes the object files.
 oclean:
 	${RM} -f ${OBJ}
 
+# This rule  deletes all Emacs and Vim temporary files, the executable
+# and the object files.
 fclean:
 	${RM} -f *~ ${NAME}
 	${RM} -f ${OBJ}
 
+# This rule forces recompilation of all source files.
 re:
 	${CC} -c -o ${word 1,${OBJ}} ${word 1,${SRC}}
 	${CC} -c -o ${word 2,${OBJ}} ${word 2,${SRC}}
