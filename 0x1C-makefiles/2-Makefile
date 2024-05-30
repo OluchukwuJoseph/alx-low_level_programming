@@ -8,7 +8,7 @@ NAME = school
 .PHONY: all
 
 # The all rule
-all: school
+all: ${NAME}
 
 # The school rule, this is an executable
 ${NAME}: ${OBJ}
